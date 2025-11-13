@@ -1,0 +1,5 @@
+-> tres colunas: todo, in progress e conclode pt br [x]
+-> add tarefas com titulo e desc opti [x]
+-> edit e mover com drag/drop [x]
+-> loading/eror
+-> persistir dados em Go [---] vini fará
