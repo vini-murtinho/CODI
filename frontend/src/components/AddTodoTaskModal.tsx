@@ -64,7 +64,7 @@ export function AddTodoTaskModal({
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
               placeholder="Digite o título da tarefa..."
               required
             />
@@ -74,10 +74,10 @@ export function AddTodoTaskModal({
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Descrição (opcional)
             </label>
-            <textarea
+              <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
               rows={3}
               placeholder="Digite uma descrição..."
             />
@@ -93,7 +93,7 @@ export function AddTodoTaskModal({
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition-colors"
+              className="flex-1 px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
             >
               {editingTask ? "Salvar" : "Adicionar"}
             </button>

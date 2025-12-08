@@ -2,6 +2,7 @@ import { useReducer, useState, useEffect } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import "../App.css";
+import { Logo } from "../components/Logo";
 import { AddTodoTaskButton } from "../components/AddTodoTaskButton";
 import { TodoColumn } from "../components/TodoColumn";
 import {
@@ -82,10 +83,15 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-row p-8 gap-4 justify-center">
-        <div className="bg-gray-200 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
-        <div className="bg-gray-200 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
-        <div className="bg-gray-200 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
+      <div className="min-h-screen bg-white flex flex-col p-6 gap-4 items-center">
+        <div className="w-full max-w-6xl flex items-center justify-between mb-6">
+          <Logo />
+        </div>
+        <div className="flex flex-row p-8 gap-4 justify-center">
+          <div className="bg-purple-100 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
+          <div className="bg-purple-100 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
+          <div className="bg-purple-100 rounded-lg shadow-md p-4 w-72 mx-2 animate-pulse" />
+        </div>
       </div>
     );
   }
@@ -93,8 +99,12 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-row p-8 gap-4 justify-center">
-          <AddTodoTaskButton onClick={() => setOpenModal(true)} />
+        <div className="min-h-screen bg-white flex flex-col p-6 gap-4 items-center">
+          <div className="w-full max-w-6xl flex items-center justify-between">
+            <Logo />
+            <AddTodoTaskButton onClick={() => setOpenModal(true)} />
+          </div>
+          <div className="flex flex-row p-8 gap-4 justify-center w-full">
           <TodoColumn
             title="A Fazer"
             tasks={pendingTasks}

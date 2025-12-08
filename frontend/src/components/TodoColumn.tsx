@@ -37,11 +37,11 @@ export function TodoColumn({
   const getColumnColor = () => {
     switch (columnType) {
       case "todo":
-        return "bg-blue-500";
+        return "bg-purple-600";
       case "in_progress":
-        return "bg-yellow-500";
+        return "bg-purple-500";
       case "done":
-        return "bg-green-500";
+        return "bg-purple-400";
       default:
         return "bg-gray-500";
     }
