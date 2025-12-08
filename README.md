@@ -40,7 +40,7 @@ O sistema permite criar, editar, deletar e mover tarefas entre colunas através 
 
 ```
 .
-├── frontend-todo-challenge-main/     # Aplicação React
+├── frontend/     # Aplicação React
 │   ├── src/
 │   │   ├── components/              # Componentes React
 │   │   │   ├── AddTodoTaskButton.tsx
@@ -56,7 +56,7 @@ O sistema permite criar, editar, deletar e mover tarefas entre colunas através 
 │   │   └── index.js
 │   └── package.json
 │
-└── go-example-main/                 # API Backend
+└── backend/                 # API Backend
     ├── handlers/                    # Controladores HTTP
     │   └── task_handler.go
     ├── models/                      # Modelos de dados
@@ -116,7 +116,7 @@ const (
 ### Executar Backend
 
 ```bash
-cd go-example-main
+cd backend
 
 # Instalar dependências
 go mod download
@@ -180,7 +180,7 @@ Arquivo `helpers.ts` contém funções para comunicação com o backend:
 ### Executar Frontend
 
 ```bash
-cd frontend-todo-challenge-main
+cd frontend
 
 # Instalar dependências
 npm install
@@ -274,13 +274,13 @@ Remove tarefa por ID.
 
 **Terminal 1 - Backend:**
 ```bash
-cd go-example-main
+cd backend
 go run main.go
 ```
 
 **Terminal 2 - Frontend:**
 ```bash
-cd frontend-todo-challenge-main
+cd frontend
 npm install
 npm start
 ```
@@ -291,12 +291,12 @@ Acesse: `http://localhost:3000`
 
 ```bash
 # Backend
-cd go-example-main
+cd backend
 make docker-build
 make docker-run
 
 # Frontend (terminal separado)
-cd frontend-todo-challenge-main
+cd frontend
 npm install
 npm start
 ```
@@ -305,7 +305,7 @@ npm start
 
 ### Backend
 ```bash
-cd go-example-main
+cd backend
 
 # Executar todos os testes
 make test
@@ -340,11 +340,3 @@ go tool cover -html=coverage.out
 - [ ] Suporte a múltiplos boards
 - [ ] Adicionar tags/categorias às tarefas
 - [ ] Implementar notificações
-
-## 📄 Licença
-
-Projeto desenvolvido para fins educacionais.
-
-## 👥 Autor
-
-Sistema Kanban - Full Stack (Go + React + TypeScript)
